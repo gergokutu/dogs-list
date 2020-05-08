@@ -1,11 +1,17 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-export default class DogsList extends Component {
-  render() {
-    return (
-      <div className="dogs-list">
-        <h1>Dogs List</h1>
-      </div>
-    );
-  }
+export default function DogsList(props) {
+  const { dogBreeds } = props;
+
+  return (
+    <div className="dogs-list">
+      <main>Dogs List</main>
+      { dogBreeds === null && "Loading..." }
+      { dogBreeds && 
+        <ul>
+          { dogBreeds.map((breed) => <li key={breed}>{breed}</li>) }
+        </ul>
+      }
+    </div>
+  );
 }
