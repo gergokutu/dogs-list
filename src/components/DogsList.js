@@ -1,7 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function DogsList(props) {
   const { dogBreeds } = props;
+
+  const renderBreed = (breed) => {
+    return (
+      <li key={breed}>
+        <Link to={ `/dog-breeds/${breed}` }>{breed}</Link>
+      </li>
+    );
+  };
 
   return (
     <div className="dogs-list">
@@ -9,7 +18,7 @@ export default function DogsList(props) {
       { dogBreeds === null && "Loading..." }
       { dogBreeds && 
         <ul>
-          { dogBreeds.map((breed) => <li key={breed}>{breed}</li>) }
+          { dogBreeds.map(renderBreed) }
         </ul>
       }
     </div>
