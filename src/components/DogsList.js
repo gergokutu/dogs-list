@@ -8,7 +8,7 @@ export default class DogsList extends Component {
   componentDidMount() {
     fetch("https://dog.ceo/api/breeds/list/all")
       .then(response => response.json())
-      .then(data => console.log("Fetched data:", data))
+      .then(data => console.log("Fetched data:", Object.keys(data.message)))
       .catch(console.error);
   };
 
