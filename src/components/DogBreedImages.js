@@ -5,11 +5,11 @@ export default function DogBreedImages(props) {
   const { breed, images } = props;
 
   return (
-    <div className="dog-breed-images">
+    <div>
       <h1>Dog Breed Images</h1>
       <p>This page will show images of a { breed } breed.</p>
       <Link to="/">Go back to the index</Link>
-      <div>
+      <div className="dog-breed-images">
         { !images && "Loading..." }
         { images && 
           images.map((url, index) => {
