@@ -7,3 +7,22 @@ li {
   position: relative;
   right: 1%;
 }
+
+img {
+  width: 30vh;
+  max-width: 400px;
+  height: 30vh;
+  max-height: 400px;
+  margin: 2rem;
+  box-shadow: 
+    5px 5px 10px rgb(1, 56, 56),
+    7px 7px 15px rgb(33, 197, 197),
+    10px 10px 20px rgb(164, 246, 246);
+}
+
+.dog-breed-images {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}

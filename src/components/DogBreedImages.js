@@ -5,7 +5,7 @@ export default function DogBreedImages(props) {
   const { breed, images } = props;
 
   return (
-    <div>
+    <div className7="dog-breed">
       <h1>Dog Breed Images</h1>
       <p>This page will show images of a { breed } breed.</p>
       <Link to="/">Go back to the index</Link>
