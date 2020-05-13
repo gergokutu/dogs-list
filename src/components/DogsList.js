@@ -14,7 +14,7 @@ export default function DogsList(props) {
 
   return (
     <div className="dogs-list">
-      <main>Dogs List</main>
+      <h1>Dogs List</h1>
       { dogBreeds === null && "Loading..." }
       { dogBreeds && 
         <ul>
